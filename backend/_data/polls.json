@@ -1,0 +1,134 @@
+[
+	{
+		"_id": "5d725c84c4ded7bcb480eaa0",
+		"hash": "0x00000015841402b6dcafeb7ab1087ccf57f2f7bdf2c8fa86775492b695e0ccfd",
+		"title": "Full Stack Web Development",
+		"description": "In this course you will learn full stack web development, first learning all about the frontend with HTML/CSS/JS/Vue and then the backend with Node.js/Express/MongoDB",
+		"expiry": "2025-05-18T16:00:00Z",
+		"owner": "0x0d336fc7929B14E9F7A436A3BA3D11d3e8F86804",
+		"options": [
+			{
+				"_id": "5d7a514b5d2c12c7449be020",
+				"signal": "0x00",
+				"hash": "69408224370722548411430196063631598657176611151251165811274434333231821288",
+				"option": "Nigeria",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be021",
+				"signal": "0x01",
+				"hash": "397810867733245872524474516233099927759981225120938214074996635525083855135",
+				"option": "United States",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be021",
+				"signal": "0x02",
+				"hash": "373848995221701702254086506795970501009050489743150667511981563469462936784",
+				"option": "Botswana",
+				"votes": 5
+			}
+		],
+		"isActive": true,
+		"createdAt": "2021-05-18T16:00:00Z"
+	},
+	{
+		"_id": "5d725cb9c4ded7bcb480eaa1",
+		"hash": "0x00000073418dff49c333f4b99eb6ff5c784c02bb80db1d7720d53ae5446fa16b",
+		"title": "Full Stack Web Dev",
+		"description": "In this course you will learn all about the front end with HTML, CSS and JavaScript. You will master tools like Git and Webpack and also learn C# and ASP.NET with Postgres",
+		"expiry": "2025-05-18T16:00:00Z",
+		"owner": "0x0d336fc7929B14E9F7A436A3BA3D11d3e8F86804",
+		"options": [
+			{
+				"_id": "5d7a514b5d2c12c7449be030",
+				"signal": "0x00",
+				"hash": "69408224370722548411430196063631598657176611151251165811274434333231821288",
+				"option": "Nigeria",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be031",
+				"signal": "0x01",
+				"hash": "397810867733245872524474516233099927759981225120938214074996635525083855135",
+				"option": "United States",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be031",
+				"signal": "0x02",
+				"hash": "373848995221701702254086506795970501009050489743150667511981563469462936784",
+				"option": "Botswana",
+				"votes": 5
+			}
+		],
+		"isActive": true,
+		"createdAt": "2021-05-18T16:00:00Z"
+	},
+	{
+		"_id": "5d725cd2c4ded7bcb480eaa2",
+		"hash": "0x0000006a8f04d33943850f282668d6a1470a7257c4cd6e9a04ec6c32c7f79d64",
+		"title": "UI/UX",
+		"description": "In this course you will learn to create beautiful interfaces. It is a mix of design and development to create modern user experiences on both web and mobile",
+		"expiry": "2025-05-18T16:00:00Z",
+		"owner": "0x0d336fc7929B14E9F7A436A3BA3D11d3e8F86804",
+		"options": [
+			{
+				"_id": "5d7a514b5d2c12c7449be010",
+				"signal": "0x00",
+				"hash": "69408224370722548411430196063631598657176611151251165811274434333231821288",
+				"option": "Nigeria",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be011",
+				"signal": "0x01",
+				"hash": "397810867733245872524474516233099927759981225120938214074996635525083855135",
+				"option": "United States",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be011",
+				"signal": "0x02",
+				"hash": "373848995221701702254086506795970501009050489743150667511981563469462936784",
+				"option": "Botswana",
+				"votes": 5
+			}
+		],
+		"isActive": true,
+		"createdAt": "2021-05-18T16:00:00Z"
+	},
+	{
+		"_id": "5d725ce8c4ded7bcb480eaa3",
+		"hash": "0x0000003bb6d8ccfb93195b178dd199b40e31e3d5ec57b1af5e12267b5ed3dd12",
+		"title": "Web Design & Development",
+		"description": "Get started building websites and web apps with HTML/CSS/JavaScript/PHP. We teach you",
+		"expiry": "2025-05-18T16:00:00Z",
+		"owner": "0x0d336fc7929B14E9F7A436A3BA3D11d3e8F86804",
+		"options": [
+			{
+				"_id": "5d7a514b5d2c12c7449be050",
+				"signal": "0x00",
+				"hash": "69408224370722548411430196063631598657176611151251165811274434333231821288",
+				"option": "Nigeria",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be051",
+				"signal": "0x01",
+				"hash": "397810867733245872524474516233099927759981225120938214074996635525083855135",
+				"option": "United States",
+				"votes": 2
+			},
+			{
+				"_id": "5d7a514b5d2c12c7449be051",
+				"signal": "0x02",
+				"hash": "373848995221701702254086506795970501009050489743150667511981563469462936784",
+				"option": "Botswana",
+				"votes": 5
+			}
+		],
+		"isActive": true,
+		"createdAt": "2021-05-18T16:00:00Z"
+	}
+]

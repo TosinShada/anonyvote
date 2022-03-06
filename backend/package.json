@@ -1,0 +1,46 @@
+{
+  "name": "anony-vote",
+  "version": "1.0.0",
+  "description": "Decentralized Anonymous Voting Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [
+    "Decentralized"
+  ],
+  "author": "Tosin Shada",
+  "license": "MIT",
+  "dependencies": {
+    "@libsem/identity": "^1.0.22",
+    "@libsem/protocols": "^1.0.27",
+    "bcryptjs": "^2.4.3",
+    "circomlib": "^2.0.2",
+    "circomlibjs": "^0.1.1",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "ethers": "^5.5.4",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-mongo-sanitize": "^1.3.2",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^3.21.1",
+    "hpp": "^0.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1",
+    "node-geocoder": "^3.24.0",
+    "nodemailer": "^6.3.0",
+    "randomatic": "^3.1.1",
+    "semaphore-merkle-tree": "^1.0.13",
+    "slugify": "^1.3.5",
+    "snarkjs": "^0.4.13",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "5d7a514b5d2c12c7449be040",
+    "poll": "5d725c84c4ded7bcb480eaa0",
+    "option": "5d7a514b5d2c12c7449be020",
+    "hash": "user",
+    "proof": "5d7a514b5d2c12c7449be020",
+    "publicSignals": "123456",
+    "nullifierHash": "5d7a514b5d2c12c7449be020",
+    "createdAt": "2022-01-18T16:00:00Z"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be041",
+    "poll": "5d725c84c4ded7bcb480eaa0",
+    "option": "5d7a514b5d2c12c7449be021",
+    "hash": "user",
+    "proof": "5d7a514b5d2c12c7449be020",
+    "publicSignals": "123456",
+    "nullifierHash": "5d7a514b5d2c12c7449be020",
+    "createdAt": "2022-01-18T16:00:00Z"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be042",
+    "poll": "5d725c84c4ded7bcb480eaa0",
+    "option": "5d7a514b5d2c12c7449be021",
+    "hash": "user",
+    "proof": "5d7a514b5d2c12c7449be020",
+    "publicSignals": "123456",
+    "nullifierHash": "5d7a514b5d2c12c7449be020",
+    "createdAt": "2022-01-18T16:00:00Z"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be043",
+    "poll": "5d725c84c4ded7bcb480eaa0",
+    "option": "5d7a514b5d2c12c7449be020",
+    "hash": "user",
+    "proof": "5d7a514b5d2c12c7449be020",
+    "publicSignals": "123456",
+    "nullifierHash": "5d7a514b5d2c12c7449be020",
+    "createdAt": "2022-01-18T16:00:00Z"
+  }
+]
