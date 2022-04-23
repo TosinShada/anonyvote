@@ -21,7 +21,7 @@ import Poll from "react-polls"
 // ** Custom Components
 import Breadcrumbs from "../utility/breadcrumbs"
 
-import { generateMerkleProof, genNullifierHash, getPolls } from "../services/apiCalls"
+import { getPolls } from "../services/apiCalls"
 
 import img1 from "@src/assets/images/slider/06.jpg"
 import CreatePoll from "./CreatePoll"
@@ -30,7 +30,9 @@ import {
     connectContract,
     packProof,
     broadcastSignal,
-    voteOption
+    voteOption,
+    genNullifierHash,
+    genMerkleProof
 } from "../services/logic"
 import { handleError, handleLoading, handleSuccess } from "../utility/alert"
 import { retrieveId } from "../utility/storage"
@@ -88,7 +90,7 @@ const Home = () => {
         genProofReq.signal = signal
 
         console.log(genProofReq)
-        const genProofResponse = await generateMerkleProof(genProofReq)
+        const genProofResponse = await genMerkleProof(genProofReq)
         const solidityProof = genProofResponse.data.data.solidityProof
         const root = genProofResponse.data.data.root
 

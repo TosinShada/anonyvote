@@ -2,17 +2,75 @@ import { providers, Contract, ethers } from "ethers"
 import config from "../artifacts/config.json"
 import semaphoreArtifact from "../artifacts/contracts/Semaphore.json"
 import { storeId } from "../utility/storage"
+import { vote, createPoll } from "./apiCalls"
+import { ZkIdentity } from "@libsem/identity"
 import {
-    vote,
-    createPoll,
-    genIdentity,
+    genSignalHash,
     genExternalNullifier,
-    genSignalHash
-} from "./apiCalls"
+    Semaphore,
+    generateMerkleProof
+} from "@libsem/protocols"
 
 let semaphoreContract
 
 const { localStorage } = window
+
+async function genIdentity() {
+    const identity = new ZkIdentity()
+    const identityCommitment = identity.genIdentityCommitment().toString()
+
+    const identityNullifier = identity.identityNullifier.toString()
+    const identityTrapdoor = identity.identityTrapdoor.toString()
+
+    const response = { identityCommitment, identityNullifier, identityTrapdoor }
+    return response
+}
+
+export async function genNullifierHash() {
+    const nullifierHash = Semaphore.genNullifierHash(
+        externalNullifier,
+        identityNullifier,
+        treeDepth
+    )
+    return nullifierHash
+}
+
+export async function genMerkleProof(request) {
+    const {
+        treeDepth,
+        zeroValue,
+        identityCommitments,
+        identityCommitment,
+        serializedIdentity,
+        externalNullifier,
+        signal
+    } = request
+
+    const merkleProof = generateMerkleProof(
+        treeDepth,
+        zeroValue,
+        5,
+        identityCommitments,
+        identityCommitment
+    )
+    const witness = Semaphore.genWitness(
+        serializedIdentity,
+        merkleProof,
+        externalNullifier,
+        signal
+    )
+
+    const fullProof = await Semaphore.genProof(
+        witness,
+        wasmFilePath,
+        finalZkeyPath
+    )
+
+    const solidityProof = Semaphore.packToSolidityProof(fullProof)
+    const root = merkleProof.root.toString()
+    const response = { solidityProof, root }
+    return response
+}
 
 export async function connectContract() {
     const { ethereum } = window
@@ -32,8 +90,7 @@ export async function connectContract() {
 }
 
 export async function registerIdentity() {
-    const response = await genIdentity()
-    const identity = response.data.data
+    const identity = await genIdentity()
     console.log(identity)
     const identityCommitment = identity.identityCommitment
 
@@ -102,10 +159,7 @@ export async function broadcastSignal(
 export async function addPoll(poll) {
     try {
         const title = poll.title.replace(/\s+/g, "")
-        const genExternalNullifierReq = {}
-        genExternalNullifierReq.title = title
-        const response = await genExternalNullifier(genExternalNullifierReq)
-        const titleHash = response.data.data
+        const titleHash = genExternalNullifier(title)
 
         const tx = await semaphoreContract
             .addExternalNullifier(titleHash)
@@ -123,10 +177,7 @@ export async function addPoll(poll) {
                 const signal = `0x0${index}`
                 request.options[index].signal = signal
 
-                const signalRequest = {}
-                signalRequest.signal = signal
-                const response = await genSignalHash(signalRequest)
-                const signalHash = response.data.data
+                const signalHash = genSignalHash(signal)
 
                 request.options[index].hash = signalHash
             }
